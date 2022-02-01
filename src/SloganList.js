@@ -1,4 +1,5 @@
 import React from 'react';
+import Slogan from './Slogan';
 
 export default function SloganList(props) {
   return (
@@ -8,9 +9,9 @@ export default function SloganList(props) {
       {/* Then map over those slogans and for each slogan, render a Slogan component. Supply a key and a slogan as props to each Slogan component */}
       <ul className='slogans-list'>
         {
-          
+          props.slogans.map((slogan, i) => <Slogan key={`${slogan}-${i}`} slogan={slogan} />
+          )
         }
-
       </ul>
     </section>
   );
