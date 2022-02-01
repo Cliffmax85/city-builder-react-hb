@@ -9,7 +9,7 @@ export default function SloganList({ slogan }) {
       {/* Then map over those slogans and for each slogan, render a Slogan component. Supply a key and a slogan as props to each Slogan component */}
       {
         slogan.map((slogans, i) => 
-          <Slogan key={`${slogans}-${i}`} slogans={slogans} />
+          <Slogan key={slogans + i} slogans={slogans} />
         )
       }
     </section>
